@@ -17,3 +17,25 @@ var charsLower = "abcdefghijklmnopqrstuvwxyz"
 var charsUpper = charsLower.toUpperCase()
 var charsNumbers = "012345679"
 var charsSpecial = "!@#$%^&*()_+"
+
+function generatePassword() {
+
+  var userLength = prompt("Enter the length of the password")
+
+  if (userLength >= 8 || userLength <= 128) {
+    if (userLength < 8 || userLength > 128) {
+      alert('The password has to be between 8 and 128 characters')
+      generatePassword()
+    }
+    alert('Press OK to continue')
+
+    userLower = confirm('Do you want lowercase letters in your password?')
+    userUpper = confirm('Do you want uppercase letters in your password?')
+    userNums = confirm('Do you want numbers in your password?')
+    userSpecial = confirm('Do you want special characters in your password?')
+
+    if (!userLower && !userUpper && !userNums && !userSpecial) {
+      alert('You need to select at least one criteria.')
+      return null
+    }
+  }
