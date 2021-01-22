@@ -39,3 +39,18 @@ function generatePassword() {
       return null
     }
   }
+
+  
+  var charSet = (userLower ? charsLower : '')
+    + (userUpper ? charsUpper : '')
+    + (userNums ? charsNumbers : '')
+    + (userSpecial ? charsSpecial : '')
+
+  var password = ""
+
+  for (var i = 0; i < userLength; i++) {
+    var charPick = Math.floor(Math.random() * charSet.length)
+    password += charSet[charPick]
+  }
+  return password
+}
