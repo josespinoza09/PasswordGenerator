@@ -25,7 +25,7 @@ function generatePassword() {
   if (userLength >= 8 || userLength <= 128) {
     if (userLength < 8 || userLength > 128) {
       alert('The password has to be between 8 and 128 characters')
-      generatePassword()
+      return generatePassword()
     }
     alert('Press OK to continue')
 
@@ -36,7 +36,7 @@ function generatePassword() {
 
     if (!userLower && !userUpper && !userNums && !userSpecial) {
       alert('You need to select at least one criteria.')
-      return null
+      return generatePassword()
     }
   }
 
