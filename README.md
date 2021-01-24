@@ -8,7 +8,7 @@ Choose lowercase, uppercase, numeric, and/or special characters
 Then will receive a random password with the criteria selected.
 
 Screenshot:
-![Project Screenshot](.img/ProjectScreenshot.png?raw=true)
+![ProjectScreenshot](img/ProjectScreenshot.png?raw=true "Web page screenshot")
 
 Live Link:
 file:///C:/Users/jose2/OneDrive/Desktop/bootcamp/PasswordGenerator/index.html
